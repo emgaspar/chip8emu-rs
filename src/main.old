@@ -1,0 +1,11 @@
+mod app;
+mod chip8;
+extern crate sdl2; 
+
+use app::Chip8App;
+use std::rc::Rc;
+
+fn main() {
+    let app = Rc::new(Chip8App::new());
+    app.run();
+}
